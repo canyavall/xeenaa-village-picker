@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "xeenaa_village_picker",
+	"version": "${version}",
+	"name": "Xeenaa Village Picker",
+	"description": "A Fabric mod that allows players to right-click villagers and select their profession from a GUI, supporting all vanilla and modded professions.",
+	"authors": [
+		"Xeenaa"
+	],
+	"contact": {
+		"homepage": "https://github.com/xeenaa/village-picker",
+		"sources": "https://github.com/xeenaa/village-picker"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/xeenaa_village_picker/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.xeenaa.villagepicker.XeenaaVillagePicker"
+		],
+		"client": [
+			"com.xeenaa.villagepicker.XeenaaVillagePickerClient"
+		]
+	},
+	"mixins": [
+		"xeenaa_village_picker.mixins.json",
+		{
+			"config": "xeenaa_village_picker.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
